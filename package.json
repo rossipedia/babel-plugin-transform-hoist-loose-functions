@@ -1,0 +1,31 @@
+{
+  "name": "babel-plugin-transform-hoist-loose-functions",
+  "version": "0.1.4",
+  "main": "lib/index.js",
+  "jsnext": "src/index.js",
+  "author": "rossipedia",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib",
+    "eslint": "eslint src utils __tests__",
+    "eslint-fix": "eslint --fix src utils __tests__",
+    "test": "jest",
+    "format": "git ls-files | grep '\\.js$' | xargs prettier --write",
+    "format-check": "git ls-files | grep '\\.js$' | xargs prettier -l"
+  },
+  "repository": "https://github.com/rossipedia/babel-plugin-transform-hoist-loose-functions",
+  "homepage": "https://github.com/rossipedia/babel-plugin-transform-hoist-loose-functions",
+  "bugs": "https://github.com/rossipedia/babel-plugin-transform-hoist-loose-functions/issues",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.1",
+    "jest": "^21.0.1"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE.md"
+  ]
+}
