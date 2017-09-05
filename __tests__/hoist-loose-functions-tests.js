@@ -285,4 +285,21 @@ describe("hoist-loose-functions-plugin", () => {
     `
     );
   });
+
+  describe("modules", () => {
+    thePlugin(
+      "should not hoist in modules",
+      `
+      export function foo() {
+        if (true) {
+          function bar() {}
+        }
+      }
+    `,
+      undefined,
+      {
+        sourceType: "module"
+      }
+    );
+  });
 });

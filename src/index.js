@@ -32,7 +32,7 @@ module.exports = function({ types: t }) {
     name: "transform-hoist-loose-functions",
     visitor: {
       Program(path) {
-        if (hasStrictModeDirective(path)) {
+        if (path.node.sourceType === "module" || hasStrictModeDirective(path)) {
           path.stop();
         }
       },
