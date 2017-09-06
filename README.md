@@ -39,7 +39,7 @@ npm install babel-plugin-transform-hoist-loose-functions
 
 ```json
 {
-  "plugins": ["transform-hoist-loost-functions"]
+  "plugins": ["transform-hoist-loose-functions"]
 }
 ```
 
