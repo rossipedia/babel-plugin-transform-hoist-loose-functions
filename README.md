@@ -4,8 +4,8 @@ This plugin hoists functions in loose-mode to their enclosing function or
 program scope.
 
 This plugin was primarily developed to support using [babel-minify][1] on
-non-strict ES5 and below. Currently babel-minify has [problems][2] non-strict
-nested functions.
+non-strict ES5 and below. Currently babel-minify has [problems][2] with 
+non-strict nested functions.
 
 [1]: https://github.com/babel/minify
 [2]: https://github.com/babel/minify/issues/682
