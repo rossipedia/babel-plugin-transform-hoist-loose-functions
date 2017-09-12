@@ -31,12 +31,6 @@ module.exports = function({ types: t }) {
   return {
     name: "transform-hoist-loose-functions",
     visitor: {
-      Program(path) {
-        if (path.node.sourceType === "module" || hasStrictModeDirective(path)) {
-          path.stop();
-        }
-      },
-
       FunctionDeclaration: {
         exit(path) {
           const parentFn = path.getFunctionParent();
@@ -47,7 +41,8 @@ module.exports = function({ types: t }) {
           const container = parentFn.isProgram()
             ? parentFn
             : parentFn.get("body");
-          container.unshiftContainer("body", t.clone(path.node))[0].skip();
+
+          container.unshiftContainer("body", t.clone(path.node));
           path.remove();
         }
       }
