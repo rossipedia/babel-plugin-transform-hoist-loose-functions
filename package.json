@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-hoist-loose-functions",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "lib/index.js",
   "jsnext": "src/index.js",
   "author": "rossipedia",
